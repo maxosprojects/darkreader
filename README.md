@@ -1,3 +1,15 @@
+# How to get version for Edge
+
+A version for Edge can be downloaded from [Releases](https://github.com/maxosprojects/darkreader/releases) page.
+
+To build a new version for Edge, a quick a dirty approach would be to:
+- check out branch `edge` or apply the changes that are in the single commit in that branch
+- `npm install`
+- `npm audit fix` (to fix any vulnerabilities)
+- `npm run release`
+- replace all occurrences of `chrome.` with `browser.` in the code in `build` folder
+- optional: pack up contents of `build` folder into a zip archive
+
 # Dark Reader for Google Chrome and Mozilla Firefox
 ![Dark Reader screenshot](https://lh3.googleusercontent.com/tTJIIIAqfJWymqPM9LAmivl11kWmF-XXLABues4OwfjOED_ntsJZdLY0VTG0XFCW0W_wYSll7Q=w640-h400-e365)
 
