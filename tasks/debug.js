@@ -5,6 +5,7 @@ const bundleLocales = require('./bundle-locales');
 const clean = require('./clean');
 const copy = require('./copy');
 const foxify = require('./foxify');
+const edgify = require('./edgify');
 const reload = require('./reload');
 const {runTasks, log} = require('./utils');
 const watch = require('./watch');
@@ -24,6 +25,7 @@ async function debug() {
             bundleLocales,
             copy,
             foxify,
+            edgify,
             reload,
         ], options);
         watch(options);

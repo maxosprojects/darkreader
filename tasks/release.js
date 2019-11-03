@@ -6,6 +6,7 @@ const clean = require('./clean');
 const codeStyle = require('./code-style');
 const copy = require('./copy');
 const foxify = require('./foxify');
+const edgify = require('./edgify');
 const {runTasks, log} = require('./utils');
 const zip = require('./zip');
 
@@ -21,6 +22,7 @@ async function release() {
             copy,
             codeStyle,
             foxify,
+            edgify,
             zip,
         ], {production: true});
         log.ok('MISSION PASSED! RESPECT +');

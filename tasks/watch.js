@@ -5,6 +5,7 @@ const bundleJS = require('./bundle-js');
 const bundleLocales = require('./bundle-locales');
 const copy = require('./copy');
 const foxify = require('./foxify');
+const edgify = require('./edgify');
 const reload = require('./reload');
 const {runTasks, log} = require('./utils');
 
@@ -14,6 +15,7 @@ const watchers = [
     [['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.js'], [
         bundleJS,
         foxify,
+        edgify,
         bundleHtml,
     ]],
     [['src/**/*.less'], [
@@ -28,6 +30,7 @@ const watchers = [
     [['src/config/**/*.config', 'src/*.json', 'src/ui/assets/**/*.*'], [
         copy,
         foxify,
+        edgify
     ]],
 ];
 

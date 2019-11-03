@@ -1690,7 +1690,7 @@
             });
         }
         setInactive() {
-            if (!browser.browserAction.setIcon) {
+            if (!browser.browserAction || !browser.browserAction.setIcon) {
                 return;
             }
             browser.browserAction.setIcon({
@@ -1955,13 +1955,13 @@
                 url &&
                 !url.startsWith("chrome") &&
                 !url.startsWith("edge") &&
-                !url.startsWith("https://chrome.google.com/webstore")
+                !url.startsWith("https://browser.google.com/webstore")
             );
         }
         return (
             url &&
             !url.startsWith("chrome") &&
-            !url.startsWith("https://chrome.google.com/webstore")
+            !url.startsWith("https://browser.google.com/webstore")
         );
     }
     function getFontList() {
